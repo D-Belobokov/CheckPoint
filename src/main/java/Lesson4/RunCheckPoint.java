@@ -3,8 +3,6 @@ import Lesson4.exceptions.GabaritException;
 import Lesson4.exceptions.Speed100Exception;
 import Lesson4.exceptions.Speed80Exception;
 
-import java.util.Random;
-
 public class RunCheckPoint {
     public static void main(String[] args) {
         final int size = 25;

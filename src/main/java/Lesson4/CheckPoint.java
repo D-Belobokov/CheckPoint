@@ -12,8 +12,8 @@ public class CheckPoint {
 
     public boolean checkGabarit(Auto auto) throws GabaritException{
         if (auto.getHeight() > this.height || auto.getWeight() > this.weight || auto.getWidth() > this.width) {
-            throw new GabaritException("Машина не проходит по габаритам, номер авто"
-                    + auto.getNumber() + "тип авто:" + (auto.isCargo() ? "грузовой" : "легковой"));
+            throw new GabaritException(" Машина не проходит по габаритам, номер автомобиля "
+                    + auto.getNumber() + " тип автомобиля: " + (auto.isCargo() ? " грузовой " : " легковой "));
 
         }else {
             return true;
@@ -23,7 +23,8 @@ public class CheckPoint {
         if (auto.getSpeed() > 80 && auto.getSpeed() < 100) {
             throw new Speed80Exception("Внимание превышение скорости, номер автомобиля" + auto.getNumber());
         }else if(auto.getSpeed() > 100) {
-            throw new Speed100Exception("Полиция преследует автомобиль");
+            throw new Speed100Exception("Полиция преследует автомобиль!" +
+                    "Превышение свыше 100км/ч! номер автомобиля: " + auto.getNumber());
         }else {
             return true;
         }
